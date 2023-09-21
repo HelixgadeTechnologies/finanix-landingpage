@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Bitcoinlogo from '../public/images/illustration.svg'
+// import Bitcoinlogo from '../public/images/illustration.svg'
 import Bitcoinlines from '../public/images/vector.png'
 import tether98 from '../public/images/tether98.png'
 import coinbaselogo from '../public/images/coinbaselogo.png'
@@ -41,7 +41,7 @@ export default function Home () {
           </p>
           <button className='bg-black text-white py-3 text-center w-full rounded-lg md:w-44 md:mx-auto'>Learn More</button>
        </div>
-      <Image src={Bitcoinlogo} alt='bitcoin logo' className='absolute top-1/2 z-40 p-3 sm:top-1/3 md:1/2' />
+      <Image src="/images/illustration.svg" width={1000} height={1000} alt='bitcoin logo' className='absolute top-1/2 z-40 p-3 sm:top-1/3 md:1/2' />
       <Image src={Bitcoinlines} alt='bitcoin lines' className='absolute w-full top-[450px] p-3 sm:top-2/3 md:top-[650px]' />
       </section>
 
