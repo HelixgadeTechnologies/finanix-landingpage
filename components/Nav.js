@@ -6,7 +6,7 @@ import logo from "../public/images/logo.png"
 export default function Nav () {
 
     return (
-        <div className="w-full bg-primaryPurple text-white p-3 gap-3 text-lg justify-around border-b border-b-slate-400 md:items-center md:flex md:flex-row">
+        <div className="w-full bg-primaryPurple text-white p-3 gap-3 text-lg justify-around md:items-center md:flex md:flex-row">
             <Image
                 src={logo}
                 alt="finanicIcon"
