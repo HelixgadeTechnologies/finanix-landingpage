@@ -120,7 +120,7 @@ export default function Home () {
         <h1 className='mx-auto text-4xl max-w-md text-center font-bold mb-12'>Pick A Plan Thats <br/>Right For You</h1>
 
 
-        <div className='flex flex-row flex-wrap w-full gap-6 justify-center'>
+        <div className='flex flex-row flex-wrap w-full gap-6 justify-center text-black'>
 
           <div className='py-8 px-4 shadow-xl border border-slate-300 rounded-lg flex flex-col gap-3 w-full md:w-fit'>
             <h2 className='text-center text-xl font-bold mb-2 bg-gray-200 w-fit mx-auto px-2'>DAILY</h2>
