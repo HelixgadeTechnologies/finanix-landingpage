@@ -19,9 +19,9 @@ import testimonialTwo from '../public/images/testimonialTwo.png'
 import minusicon from '../public/images/minusicon.png'
 import plusicon from '../public/images/plusicon.png'
 import shapes from '../public/images/shapes.png'
-import shapeTwo from '../public/images/shapeTwo.png'
-import shapeOne from '../public/images/shapeOne.png'
-import shapeThree from '../public/images/shapeThree.png'
+// import shapeTwo from '../public/images/shapeTwo.png'
+// import shapeOne from '../public/images/shapeOne.png'
+// import shapeThree from '../public/images/shapeThree.png'
 
 
 export default function Home() {

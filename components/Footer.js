@@ -10,7 +10,8 @@ import instagrambutton from '../public/icons/instagrambutton.png'
 import twitterbutton from '../public/icons/twitterbutton.png'
 import logoGrey from '../public/images/logoGrey.png'
 
-const Footer = () => {
+
+export default function Footer () {
 
 
     return (
@@ -87,5 +88,3 @@ const Footer = () => {
         </div>
     )
 }
-
-export default Footer
