@@ -24,7 +24,7 @@ import shapes from '../public/images/shapes.png'
 // import shapeThree from '../public/images/shapeThree.png'
 
 
-export default function Home() {
+export default function Home () {
   return (
    
     <div className='bg-white'>

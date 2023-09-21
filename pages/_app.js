@@ -1,7 +1,9 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
+import Head from 'next/head'
+import react from 'react'
 
-function MyApp({ Component, pageProps }) {
+function _app({ Component, pageProps }) {
 
   return (
        <Layout>
@@ -12,4 +14,4 @@ function MyApp({ Component, pageProps }) {
   
 }
 
-export default MyApp
+export default _app
