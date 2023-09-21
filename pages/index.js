@@ -23,7 +23,6 @@ import shapeTwo from '../public/images/shapeTwo.png'
 import shapeOne from '../public/images/shapeOne.png'
 import shapeThree from '../public/images/shapeThree.png'
 
-// import styles from '../public/images/styles/Home.module.css'
 
 export default function Home() {
   return (
@@ -34,16 +33,16 @@ export default function Home() {
         <div className='flex flex-col gap-6 md:gap-6'>
           <div className='space-y-2'>
           <h1 className='text-white text-2xl font-bold text-center sm:text-3xl  md:text-6xl'>Discover Your Visual Investment Manager</h1>
-        {/* <h1 className='text-white text-2xl font-bold text-center sm:text-3xl md:text-6xl'>Investment Manager</h1> */}
-          </div>
+        </div>
+          
         <p className='text-white text-sm max-w-xs text-center mx-auto md:text-lg md:max-w-prose'>
         Are you ready to seize the opportunities in the digital realm of 
         cryptocurrencies?
           </p>
           <button className='bg-black text-white py-3 text-center w-full rounded-lg md:w-44 md:mx-auto'>Learn More</button>
        </div>
-      <Image src={Bitcoinlogo} alt='bitcoin logo' className='absolute top-1/2 z-40 p-3 sm:top-1/3 md:1/2'/>
-      <Image src={Bitcoinlines} alt='bitcoin lines' className='absolute w-full top-[450px] p-3 sm:top-2/3 md:top-[650px]'/>
+      <Image src={Bitcoinlogo} alt='bitcoin logo' className='absolute top-1/2 z-40 p-3 sm:top-1/3 md:1/2' />
+      <Image src={Bitcoinlines} alt='bitcoin lines' className='absolute w-full top-[450px] p-3 sm:top-2/3 md:top-[650px]' />
       </section>
 
       <section className='bg-blueGray w-full mt-36 pb-24 p-3 md:mt-72 md:pt-24'>
@@ -127,27 +126,27 @@ export default function Home() {
             <h2 className='text-center text-xl font-bold mb-2 bg-gray-200 w-fit mx-auto px-2'>DAILY</h2>
             <span className='flex flex-row gap-2 text-md'>
               <Image src={tickcircle} alt='tick box' />
-             <p> Secure Your Financial Future</p>
+             <p>Secure Your Financial Future</p>
             </span>
             <span className='flex flex-row gap-2 text-md'>
               <Image src={tickcircle} alt='tick box' />
-             <p> Min. Deposit: $20,000</p>
+             <p>Min. Deposit: $20,000</p>
             </span>
             <span className='flex flex-row gap-2 text-md'>
               <Image src={tickcircle} alt='tick box' />
-             <p> Max. Deposit: $150,000</p>
+             <p>Max. Deposit: $150,000</p>
             </span>
             <span className='flex flex-row gap-2 text-md'>
               <Image src={tickcircle} alt='tick box' />
-             <p> Daily Withdrawals</p>
+             <p>Daily Withdrawals</p>
             </span>
             <span className='flex flex-row gap-2 text-md'>
               <Image src={tickcircle} alt='tick box' />
-             <p> Compound Interest</p>
+             <p>Compound Interest</p>
             </span>
             <span className='flex flex-row gap-2 text-md'>
               <Image src={closecircle} alt='tick box' />
-             <p className='text-red-400'> Deposit Bonus</p>
+             <p className='text-red-400'>Deposit Bonus</p>
             </span>
             <span className='flex flex-row gap-2 text-md'>
               <Image src={closecircle} alt='tick box' />
@@ -156,7 +155,7 @@ export default function Home() {
 
             <span className='flex flex-row gap-2 text-md'>
               <Image src={tickcircle} alt='tick box' />
-             <p> Dedicated Account Manager</p>
+             <p>Dedicated Account Manager</p>
             </span>
 
             <button className='bg-primaryPurple text-white mt-3 py-3 rounded-lg'>Subscribe Now</button>
@@ -344,12 +343,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className='bg-darkishBlueGray'>
-        <div className='flex flex-row'>
-        <Image src={} />
+      <section className='bg-darkishBlueGray py-8'>
+        <div className='flex flex-col-reverse mt-6 relative w-full md:flex-row'>
+          <Image src={shapes} className='w-1/2 md:w-2/3'/>
+          {/* <Image src={shapeTwo} className='hidden lg:block md:fixed md:top-44 lg:left-1/3'/>
+          <Image src={shapeThree} className='hidden lg:block md:fixed md:top-44 lg:left-[38vw]'/>
+          <Image src={shapeOne} className='hidden lg:block md:fixed md:top-[] lg:left-[43vw]'/> */}
+          
+          <div className='text-white text-center mx-auto md:mt-12 md:text-left md:mx-2'>
+            <h1 className='text-3xl max-w-sm font-bold'>
+            Join a new generation of investors today.
+            </h1>
+            <button className='bg-white py-3 px-6 rounded-3xl text-black mt-6 font-bold'>Get Started</button>
+          </div>
         </div>
 
-      </section> */}
+      </section>
     </div>
     
   )

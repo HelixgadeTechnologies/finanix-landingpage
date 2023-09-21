@@ -17,9 +17,6 @@ const Nav = () => {
                 <Link href='/About'>About</Link>
                 <Link href='/About'>About</Link>
                 <Link href='/About'>About</Link>
-                <Link href='/About'>About</Link>
-                <Link href='/About'>About</Link>
-                <Link href='/About'>About</Link>
             </div>
 
             <div className="hidden items-center gap-x-6 md:flex md:flex-row">

@@ -21,6 +21,15 @@ import shapes from './shapes.png'
 import shapeTwo from './shapeTwo.png'
 import shapeOne from './shapeOne.png'
 import shapeThree from './shapeThree.png'
+import footerlogo from './footerlogo.png'
+import location from './location.png'
+import call from './call.png'
+import callSmall from './callSmall.png'
+import facebookbutton from './facebookbutton.png'
+import instagrambutton from './instagrambutton.png'
+import twitterbutton from './twitterbutton.png'
+import logoGrey from './logoGrey.png'
+import locationSmall from './locationSmall.png'
 
 
 
@@ -47,6 +56,15 @@ export default {
     shapes,
     shapeOne,
     shapeThree,
-    shapeTwo
+    shapeTwo,
+    footerlogo,
+    location,
+    call,
+    callSmall,
+    facebookbutton,
+    instagrambutton,
+    twitterbutton,
+    logoGrey,
+    locationSmall
 }
 
