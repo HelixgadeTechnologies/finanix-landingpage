@@ -117,7 +117,7 @@ export default function Home() {
 
 
       <section className='bg-blueGray p-4 md:p-12'>
-        <h1 className='mx-auto text-4xl max-w-md text-center font-bold mb-12'>Pick A Plan That's <br/>Right For You</h1>
+        <h1 className='mx-auto text-4xl max-w-md text-center font-bold mb-12'>Pick A Plan Thats <br/>Right For You</h1>
 
 
         <div className='flex flex-row flex-wrap w-full gap-6 justify-center'>
