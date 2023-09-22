@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import Image from 'next/image';
 import Bitcoinlogo from '../public/images/illustration.svg';
 import Bitcoinlines from '../public/images/vector.png';
@@ -24,6 +25,34 @@ import shapes from '../public/images/shapes.png';
 // import shapeThree from '../public/images/shapeThree.png'
 
 export default function Home() {
+
+    const [isFirstDropdownVisible, setIsFirstDropdownVisible] = useState(false);
+    const [isSecondDropdownVisible, setIsSecondDropdownVisible] = useState(false);
+    const [isThirdDropdownVisible, setIsThirdDropdownVisible] = useState(false);
+    const [isFourthDropdownVisible, setIsFourthDropdownVisible] = useState(false);
+    const [isFifthDropdownVisible, setIsFifthDropdownVisible] = useState(false);
+  
+    const toggleFirstDropdown = () => {
+      setIsFirstDropdownVisible(!isFirstDropdownVisible);
+    };
+    const toggleSecondDropdown = () => {
+      setIsSecondDropdownVisible(!isSecondDropdownVisible);
+    };
+    const toggleThirdDropdown = () => {
+      setIsThirdDropdownVisible(!isThirdDropdownVisible);
+    };
+    const toggleFourthDropdown = () => {
+      setIsFourthDropdownVisible(!isFourthDropdownVisible);
+    };
+    
+    const toggleFifthDropdown = () => {
+      setIsFifthDropdownVisible(!isFifthDropdownVisible);
+    };
+    
+   
+
+
+
   return (
     <div className="bg-white text-black">
       <section className="w-full h-[650px] bg-primaryPurple relative flex flex-col items-center pt-6 px-3 font-Yukita-Sans md:pt-12 sm:h-[1000px] md:h-[1200px]">
@@ -371,45 +400,103 @@ export default function Home() {
           </h3>
 
           <div className="max-w-3xl mx-auto mt-24">
-            <div className="hidden md:flex md:flex-row md:justify-between md:items-center">
-              <h2 className="text-2xl font-bold">
-                Are my investments safe with Finanix?
-              </h2>
-              <Image src={minusicon} alt="minus sign" />
-            </div>
-            <p className="hidden md:block text-black">
-              Absolutely! Your security is our top priority. Our platform
-              utilizes top-notch encryption and security protocols to ensure the
-              safety of your funds and personal data.
-            </p>
+              <div className="flex flex-row justify-between items-center cursor-pointer"  onClick={toggleFirstDropdown}>
+                  
+                <h2 className="text-2xl font-bold max-w-[200px] md:max-w-prose">
+                  Are my investments safe with Finanix?
+                </h2>
+              
+                <Image src={minusicon} alt="minus sign" className={`${isFirstDropdownVisible ? 'block' : 'hidden'} 
+                transform transition-transform duration-300`} />
+              
+                <Image src={plusicon} alt="plus sign" className={`${isFirstDropdownVisible ? 'hidden' : 'block'} 
+                transform transition-transform duration-300`} />
+              </div>
+            
+                <p className={`${isFirstDropdownVisible ? 'block' : 'hidden'} text-black text-xs md:text-lg`}>
+                  Absolutely! Your security is our top priority. Our platform
+                  utilizes top-notch encryption and security protocols to ensure the
+                  safety of your funds and personal data.
+                </p>
 
-            <div className="flex flex-row mt-12 justify-between items-center">
-              <h2 className="text-2xl font-bold max-w-sm text-black md:max-w-prose">
-                How do i get started?
-              </h2>
-              <Image src={plusicon} alt="minus sign" className="w-12 h-12" />
-            </div>
+          <div className="flex flex-row justify-between items-center cursor-pointer mt-6 md:mt-12"  onClick={toggleSecondDropdown}>
+                  
+          <h2 className="text-2xl font-bold max-w-[200px] md:max-w-prose">
+          How do i get started?
+          </h2>
+                
+          <Image src={minusicon} alt="minus sign" className={`${isSecondDropdownVisible ? 'block' : 'hidden'} 
+          transform transition-transform duration-300`} />
+        
+          <Image src={plusicon} alt="plus sign" className={`${isSecondDropdownVisible ? 'hidden' : 'block'} 
+          transform transition-transform duration-300`} />
+        </div>
+      
+          <p className={`${isSecondDropdownVisible ? 'block' : 'hidden'} text-black text-xs md:text-lg`}>
+            Absolutely! Your security is our top priority. Our platform
+            utilizes top-notch encryption and security protocols to ensure the
+            safety of your funds and personal data.
+          </p>
+            
 
-            <div className="flex flex-row mt-12 justify-between items-center">
-              <h2 className="text-2xl font-bold max-w-sm text-black md:max-w-prose">
-                How does AI support work?
-              </h2>
-              <Image src={plusicon} alt="minus sign" className="w-12 h-12" />
-            </div>
+          <div className="flex flex-row justify-between items-center cursor-pointer mt-6 md:mt-12"  onClick={toggleThirdDropdown}>
+                  
+            <h2 className="text-2xl font-bold max-w-[200px] md:max-w-prose">
+            How does AI support work?
+            </h2>
+                  
+            <Image src={minusicon} alt="minus sign" className={`${isThirdDropdownVisible ? 'block' : 'hidden'} 
+            transform transition-transform duration-300`} />
+          
+            <Image src={plusicon} alt="plus sign" className={`${isThirdDropdownVisible ? 'hidden' : 'block'} 
+            transform transition-transform duration-300`} />
+          </div>
+              
+          <p className={`${isThirdDropdownVisible ? 'block' : 'hidden'} text-black text-xs md:text-lg`}>
+            Absolutely! Your security is our top priority. Our platform
+            utilizes top-notch encryption and security protocols to ensure the
+            safety of your funds and personal data.
+          </p>
 
-            <div className="flex flex-row mt-12 justify-between items-center">
-              <h2 className="text-2xl font-bold max-w-sm text-black md:max-w-prose">
-                Can i use Finanix from anywhere in the world?
-              </h2>
-              <Image src={plusicon} alt="minus sign" className="w-12 h-12" />
-            </div>
+          <div className="flex flex-row justify-between items-center cursor-pointer mt-6 md:mt-12"  onClick={toggleFourthDropdown}>
+                  
+            <h2 className="text-2xl font-bold max-w-[200px] md:max-w-prose">
+            Can i use Finanix from anywhere in the world?
+            </h2>
+                  
+            <Image src={minusicon} alt="minus sign" className={`${isFourthDropdownVisible ? 'block' : 'hidden'} 
+            transform transition-transform duration-300`} />
+          
+            <Image src={plusicon} alt="plus sign" className={`${isFourthDropdownVisible ? 'hidden' : 'block'} 
+            transform transition-transform duration-300`} />
+          </div>
+              
+          <p className={`${isFourthDropdownVisible ? 'block' : 'hidden'} text-black text-xs md:text-lg`}>
+            Absolutely! Your security is our top priority. Our platform
+            utilizes top-notch encryption and security protocols to ensure the
+            safety of your funds and personal data.
+          </p>
 
-            <div className="flex flex-row mt-12 justify-between items-center">
-              <h2 className="text-2xl font-bold max-w-sm text-black md:max-w-prose">
-                What is Arbitrage trading?
-              </h2>
-              <Image src={plusicon} alt="minus sign" className="w-12 h-12" />
-            </div>
+          <div className="flex flex-row justify-between items-center cursor-pointer mt-6 md:mt-12"  onClick={toggleFifthDropdown}>
+                  
+            <h2 className="text-2xl font-bold max-w-[200px] md:max-w-prose">
+            What is Arbitrage trading?
+            </h2>
+                  
+            <Image src={minusicon} alt="minus sign" className={`${isFifthDropdownVisible ? 'block' : 'hidden'} 
+            transform transition-transform duration-300`} />
+          
+            <Image src={plusicon} alt="plus sign" className={`${isFifthDropdownVisible ? 'hidden' : 'block'} 
+            transform transition-transform duration-300`} />
+          </div>
+              
+          <p className={`${isFifthDropdownVisible ? 'block' : 'hidden'} text-black text-xs md:text-lg`}>
+            Absolutely! Your security is our top priority. Our platform
+            utilizes top-notch encryption and security protocols to ensure the
+            safety of your funds and personal data.
+          </p>
+
+
           </div>
         </div>
       </section>
