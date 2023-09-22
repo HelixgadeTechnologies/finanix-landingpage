@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div>
       <div className="flex p-[24px] justify-between gap-10">
@@ -105,4 +105,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
