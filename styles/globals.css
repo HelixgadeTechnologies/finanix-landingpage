@@ -5,8 +5,8 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
+  /* padding: 0;
+  margin: 0; */
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -34,7 +34,7 @@ main{
   } */
 /* } */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: white;
   }
@@ -42,4 +42,4 @@ main{
     color: black;
     background: white;
   }
-}
+} */
