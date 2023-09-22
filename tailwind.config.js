@@ -13,6 +13,10 @@ module.exports = {
       inter: ['Inter', 'sans'],
     },
     extend: {
+      backgroundImage: {
+        'auth-background': "url('/images/loginart.png')",
+      },
+
       colors: {
         primaryPurple: '#701A75',
         blueGray: '#F1F5F9',
