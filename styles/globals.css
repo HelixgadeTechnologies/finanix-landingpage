@@ -32,7 +32,7 @@ main{
     color: white;
     background: black;
   } */
-}
+/* } */
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -42,4 +42,4 @@ main{
     color: black;
     background: white;
   }
-} */
+}
