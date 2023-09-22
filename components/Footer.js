@@ -61,12 +61,13 @@ export default function Footer () {
                     </div>
 
 
-                    <div className="flex flex-col gap-8">
-                        <h2 className="text-black md:text-white">Subscribe to get the latest news from us</h2>
+                    <div className="flex flex-col gap-6 md:-mt-3">
+                        <h2 className="text-black md:text-white text-xl">Subscribe to get the latest news from us</h2>
                         <form>
 
-                            <div className="w-fit bg-white p-2 rounded-xl border border-solid border-slate-400 md:border-none">
-                                <input type="email" placeholder="youremail123@gmail.com" className="placeholder:text-xs bg-white placeholder:text-slate-500" />
+                            <div className="w-full bg-white p-2 flex flex-row justify-between rounded-xl border border-solid border-slate-400 md:w-96 md:border-none">
+                                    <input type="email" placeholder="youremail123@gmail.com" className="w-64 outline-none placeholder:text-md
+                                     bg-white text-black placeholder:text-slate-500 md:w-64 md:placeholder:text-xs" />
                                 <button className="text-white bg-primaryPurple text-sm p-3 rounded-lg">SUBSCRIBE</button>
                             </div>
                         </form>

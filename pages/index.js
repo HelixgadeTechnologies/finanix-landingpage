@@ -29,7 +29,7 @@ export default function Home() {
       <section className="w-full h-[650px] bg-primaryPurple relative flex flex-col items-center pt-6 px-3 font-Yukita-Sans md:pt-12 sm:h-[1000px] md:h-[1200px]">
         <div className="flex flex-col gap-8 md:gap-8">
           <div className="space-y-2">
-            <h1 className="text-white text-2xl font-semibold text-center tracking-wide sm:text-3xl  md:text-8xl">
+            <h1 className="text-white text-4xl font-semibold text-center tracking-wide sm:text-3xl  md:text-8xl">
               Discover Your Visual <br/>Investment Manager
             </h1>
           </div>
