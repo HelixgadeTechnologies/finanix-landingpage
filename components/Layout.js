@@ -1,20 +1,26 @@
-import Nav from './Nav'
-import Footer from './Footer'
+import Nav from './Nav';
+import Footer from './Footer';
 
+import { useRouter } from 'next/router';
 
-export default function Layout ({ children }) {
+const noLayout = ['/login'];
 
-    return (
-        <>
-            <Nav />
+export default function Layout({ children }) {
+  const router = useRouter();
 
-        <div>
-            <main className="bg-red-300">
-            {children}
-            </main>
-        </div>
-            
+  return (
+    <>
+      <div className={noLayout.includes(router.route) ? 'hidden' : ''}>
+        <Nav />
+      </div>{' '}
+      <div>
+        <main className={noLayout.includes(router.route) ? '' : `bg-red-300`}>
+          {children}
+        </main>
+      </div>
+      <div className={noLayout.includes(router.route) ? 'hidden' : ''}>
         <Footer />
-        </>
-    )
+      </div>{' '}
+    </>
+  );
 }
