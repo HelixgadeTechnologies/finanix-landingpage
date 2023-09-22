@@ -25,39 +25,41 @@ import shapes from '../public/images/shapes.png';
 
 export default function Home() {
   return (
-    <div className="bg-white">
-      <section className="w-full h-[500px] bg-primaryPurple relative flex flex-col items-center pt-6 px-3 font-Yukita-Sans md:pt-12 sm:h-[1000px] md:h-[1000px]">
-        <div className="flex flex-col gap-6 md:gap-6">
+    <div className="bg-white text-black">
+      <section className="w-full h-[650px] bg-primaryPurple relative flex flex-col items-center pt-6 px-3 font-Yukita-Sans md:pt-12 sm:h-[1000px] md:h-[1200px]">
+        <div className="flex flex-col gap-8 md:gap-8">
           <div className="space-y-2">
-            <h1 className="text-white text-2xl font-bold text-center sm:text-3xl  md:text-6xl">
-              Discover Your Visual Investment Manager
+            <h1 className="text-white text-2xl font-semibold text-center tracking-wide sm:text-3xl  md:text-8xl">
+              Discover Your Visual <br/>Investment Manager
             </h1>
           </div>
 
-          <p className="text-white text-sm max-w-xs text-center mx-auto md:text-lg md:max-w-prose">
+          <p className="text-white text-sm max-w-xs text-center mx-auto md:text-3xl md:max-w-prose">
             Are you ready to seize the opportunities in the digital realm of
             cryptocurrencies?
           </p>
-          <button className="bg-black text-white py-3 text-center w-full rounded-lg md:w-44 md:mx-auto">
+          <button className="bg-black text-white py-3 text-center w-full rounded-lg font-roboto md:w-64 md:mx-auto">
             Learn More
           </button>
         </div>
         <Image
           src={Bitcoinlogo}
           width={1000}
-          height={1000}
+          height={700}
           alt="bitcoin logo"
           className="absolute top-1/2 z-40 p-3 sm:top-1/3 md:1/2"
         />
         <Image
           src={Bitcoinlines}
+          width={600}
+          height={600}
           alt="bitcoin lines"
           className="absolute w-full top-[450px] p-3 sm:top-2/3 md:top-[650px]"
         />
       </section>
 
       <section className="bg-blueGray w-full mt-36 pb-24 p-3 md:mt-72 md:pt-24">
-        <h1 className="font-bold text-4xl text-center mb-6">
+        <h1 className="font-bold text-4xl text-center mb-6 text-black">
           Our Top Partners
         </h1>
         <div className="flex flex-row justify-around flex-wrap gap-3 mt-3 md:mt-12">
@@ -93,7 +95,7 @@ export default function Home() {
       </section>
 
       <section className="w-full">
-        <h1 className="text-4xl max-w-sm font-bold text-center mx-auto pt-6 md:py-24">
+        <h1 className="text-4xl text-black max-w-sm font-bold text-center mx-auto pt-6 md:py-24">
           Get Started in Just A Few Minutes
         </h1>
         <div className="py-32 w-full p-3 relative md:bg-lightGray">
@@ -120,7 +122,7 @@ export default function Home() {
           <Image src={right} alt="right image" />
 
           <div className="flex flex-col gap-3">
-            <h1 className="font-bold text-4xl">About Finanix</h1>
+            <h1 className="font-bold text-4xl text-darkBlueBlack">About Finanix</h1>
             <p className="text-darkBlueBlack max-w-lg leading-7 text-lg">
               At Finanix, we are pioneers in revolutionizing cryptocurrency
               trading and investment management. Powered by advanced AI
@@ -128,17 +130,17 @@ export default function Home() {
               efficient platform for you to navigate the world of Bitcoin with
               ease.
             </p>
-            <span className="flex flex-row gap-2 font-bold text-md ">
+            <span className="flex flex-row gap-2 font-bold text-md text-black">
               <Image src={tickcircle} alt="tick box" />
               <p> Trade Smarter, Not Harder</p>
             </span>
 
-            <span className="flex flex-row gap-2 font-bold text-md">
+            <span className="flex flex-row gap-2 font-bold text-md text-black">
               <Image src={tickcircle} alt="tick box" />
               <p> Secure Your Financial Future</p>
             </span>
 
-            <span className="flex flex-row gap-2 font-bold text-md">
+            <span className="flex flex-row gap-2 font-bold text-md text-black">
               <Image src={tickcircle} alt="tick box" />
               <p> Maximize Your Profits</p>
             </span>
@@ -147,7 +149,7 @@ export default function Home() {
       </section>
 
       <section className="bg-blueGray p-4 md:p-12">
-        <h1 className="mx-auto text-4xl max-w-md text-center font-bold mb-12">
+        <h1 className="mx-auto text-4xl max-w-md text-center font-bold mb-12 text-black">
           Pick A Plan Thats <br />
           Right For You
         </h1>
@@ -328,10 +330,10 @@ export default function Home() {
       </section>
 
       <section className="py-12">
-        <h1 className="py-12 text-3xl w-full text-center mx-auto font-bold md:text-5xl md:w-3/4 md:text-left">
+        <h1 className="py-12 text-3xl w-full text-center mx-auto font-bold text-black md:text-5xl md:w-3/4 md:text-left">
           What Everyone Says...
         </h1>
-        <div className="flex flex-col sm:flex-row sm:justify-center sm:flex-wrap md:flex-nowrap md:w-3/4 mx-auto md:overflow-x-auto ...">
+        <div className="flex flex-flex-row overflow-x-auto ...  justify-center  md:w-3/4 mx-auto md:overflow-x-auto ...">
           <Image
             src={testimonialOne}
             alt="testimonials"
@@ -360,11 +362,11 @@ export default function Home() {
           {/* <Image src={testimonialOne} alt='testimonials'/> */}
         </div>
 
-        <div className="p-3">
-          <h1 className="text-2xl text-center py-6 font-bold md:text-6xl">
+        <div className="p-3 text-black">
+          <h1 className="text-2xl text-center py-6 font-bold text-black md:text-6xl">
             Frequently Asked Questions
           </h1>
-          <h3 className="text-center text-xl">
+          <h3 className="text-center text-xl text-black">
             Have Questions? We Have Answers!
           </h3>
 
@@ -375,35 +377,35 @@ export default function Home() {
               </h2>
               <Image src={minusicon} alt="minus sign" />
             </div>
-            <p className="hidden md:block">
+            <p className="hidden md:block text-black">
               Absolutely! Your security is our top priority. Our platform
               utilizes top-notch encryption and security protocols to ensure the
               safety of your funds and personal data.
             </p>
 
             <div className="flex flex-row mt-12 justify-between items-center">
-              <h2 className="text-2xl font-bold max-w-sm md:max-w-prose">
+              <h2 className="text-2xl font-bold max-w-sm text-black md:max-w-prose">
                 How do i get started?
               </h2>
               <Image src={plusicon} alt="minus sign" className="w-12 h-12" />
             </div>
 
             <div className="flex flex-row mt-12 justify-between items-center">
-              <h2 className="text-2xl font-bold max-w-sm md:max-w-prose">
+              <h2 className="text-2xl font-bold max-w-sm text-black md:max-w-prose">
                 How does AI support work?
               </h2>
               <Image src={plusicon} alt="minus sign" className="w-12 h-12" />
             </div>
 
             <div className="flex flex-row mt-12 justify-between items-center">
-              <h2 className="text-2xl font-bold max-w-sm md:max-w-prose">
+              <h2 className="text-2xl font-bold max-w-sm text-black md:max-w-prose">
                 Can i use Finanix from anywhere in the world?
               </h2>
               <Image src={plusicon} alt="minus sign" className="w-12 h-12" />
             </div>
 
             <div className="flex flex-row mt-12 justify-between items-center">
-              <h2 className="text-2xl font-bold max-w-sm md:max-w-prose">
+              <h2 className="text-2xl font-bold max-w-sm text-black md:max-w-prose">
                 What is Arbitrage trading?
               </h2>
               <Image src={plusicon} alt="minus sign" className="w-12 h-12" />
@@ -414,16 +416,16 @@ export default function Home() {
 
       <section className="bg-darkishBlueGray py-8">
         <div className="flex flex-col-reverse mt-6 relative w-full md:flex-row">
-          <Image src={shapes} className="w-1/2 md:w-2/3" />
+          <Image src={shapes} className="w-1/2 md:w-1/2" />
           {/* <Image src={shapeTwo} className='hidden lg:block md:fixed md:top-44 lg:left-1/3'/>
           <Image src={shapeThree} className='hidden lg:block md:fixed md:top-44 lg:left-[38vw]'/>
           <Image src={shapeOne} className='hidden lg:block md:fixed md:top-[] lg:left-[43vw]'/> */}
 
           <div className="text-white text-center mx-auto md:mt-12 md:text-left md:mx-2">
-            <h1 className="text-3xl max-w-sm font-bold">
+            <h1 className="text-xl max-w-sm font-bold md:text-3xl">
               Join a new generation of investors today.
             </h1>
-            <button className="bg-white py-3 px-6 rounded-3xl text-black mt-6 font-bold">
+            <button className="bg-white py-2 px-3 rounded-3xl text-black text-sm mt-6 font-bold md:py-3 md:px-6 md:text-md">
               Get Started
             </button>
           </div>
