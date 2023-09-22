@@ -9,7 +9,7 @@ export default function Layout ({ children }) {
             <Nav />
 
         <div>
-            <main className="bg-red-300">
+            <main>
             {children}
             </main>
         </div>
