@@ -30,11 +30,28 @@ import instagrambutton from './instagrambutton.png'
 import twitterbutton from './twitterbutton.png'
 import logoGrey from './logoGrey.png'
 import locationSmall from './locationSmall.png'
+import dashboardfinanixicon from './dashboardfinanixicon.png'
+import profile from './profile.png'
+import receiptitem from './receiptitem.png'
+import statusup from './statusup.png'
+import chart from './chart.png'
+import settings from './setting.png'
+import Avatar from './Avatar.png'
+import logout from './logout.png'
+import forbidden from './forbidden.png'
+import timer from './timer.png'
+import trendup from './trendup.png'
+import Walletfill from './Walletfill.png'
+import percentagecircle from './percentagecircle.png'
+import Arrowup from './Arrowup.png'
+import menunavbar from './menunavbar.png'
+import closeIcon from './closeIcon.png'
 
 
 
 export default {
     logo,
+    Arrowup,
     illustration,
     vector,
     tether98,
@@ -65,6 +82,21 @@ export default {
     instagrambutton,
     twitterbutton,
     logoGrey,
-    locationSmall
+    locationSmall,
+    dashboardfinanixicon,
+    profile,
+    receiptitem,
+    statusup,
+    chart,
+    Avatar,
+    settings,
+    logout,
+    forbidden,
+    timer,
+    trendup,
+    Walletfill,
+    percentagecircle,
+    menunavbar,
+    closeIcon
 }
 
