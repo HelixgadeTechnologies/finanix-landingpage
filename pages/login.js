@@ -1,9 +1,77 @@
+import { useState } from 'react';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
+import toast, { Toaster } from 'react-hot-toast';
+
+import supabase from '../config/supabase.config';
+
 const SignUp = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const login = async () => {
+    try {
+      setIsLoading(true);
+      let { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      if (error) throw error;
+      console.log(data);
+    } catch (error) {
+      console.error(error.message);
+      toast(error.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const googleSignIn = async () => {
+    try {
+      const { user, error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+      });
+
+      console.log('user', user);
+
+      if (error) throw error;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const facebookSignIn = async () => {
+    try {
+      const { user, error } = await supabase.auth.signInWithOAuth({
+        provider: 'facebook',
+      });
+
+      console.log('user', user);
+
+      if (error) throw error;
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <div>
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          // Define default options
+          className: 'bg-white text-red-700',
+          duration: 5000,
+          style: {
+            background: '#fff',
+            color: 'red',
+            border: `1px solid red`,
+          },
+        }}
+      />
       <div className="flex p-[24px] justify-between gap-10">
         <div className="form  sm:w-1/2	sm:pt-32 sm:pl-32">
           <h1 className="text-[18px] sm:text-[40px] font-semibold font-inter">
@@ -19,6 +87,7 @@ const SignUp = () => {
             <input
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="Example@email.com"
+              onClick={(e) => setEmail(e.target.value)}
             />
 
             <label className="text-[14px] text-gray font-medium">
@@ -28,6 +97,7 @@ const SignUp = () => {
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="At least 8 characters"
               type="password"
+              onClick={(e) => setPassword(e.target.value)}
             />
 
             <p className="text-xs">
@@ -42,8 +112,15 @@ const SignUp = () => {
               of Finanix.
             </p>
 
-            <button className="block w-full py-2.5 px-5 bg-primaryPurple text-white mt-4 rounded-lg">
-              Log In
+            <button
+              onClick={() => login()}
+              className="block w-full py-2.5 px-5 bg-primaryPurple text-white mt-4 rounded-lg"
+            >
+              {!isLoading ? (
+                <span>Log In</span>
+              ) : (
+                <div className="">Loading...</div>
+              )}{' '}
             </button>
 
             <div className="flex justify-between pt-4">
@@ -52,18 +129,24 @@ const SignUp = () => {
               <span></span>
             </div>
 
-            <div className="py-2.5 text-center bg-[#F3F9FA] text-[#313957] m-4 flex justify-center items-center">
+            <div
+              onClick={() => googleSignIn()}
+              className="py-2.5 text-center bg-[#F3F9FA] text-[#313957] m-4 flex justify-center items-center cursor-pointer"
+            >
               <Image
                 src={'/images/Google.png'}
                 height={20}
                 width={20}
-                alt="facebook"
+                alt="google"
                 className="mr-2"
               />{' '}
               Sign up with Google
             </div>
 
-            <div className="py-2.5 text-center bg-[#F3F9FA] text-[#313957] m-4 flex justify-center items-center">
+            <div
+              onClick={() => facebookSignIn()}
+              className="py-2.5 text-center bg-[#F3F9FA] text-[#313957] m-4 flex justify-center items-center cursor-pointer"
+            >
               <Image
                 src={'/images/Facebook.png'}
                 height={20}
@@ -76,8 +159,8 @@ const SignUp = () => {
 
             <p className="text-center">
               Already have an account?{' '}
-              <Link className="text-primaryPurple " href="/login">
-                Log In
+              <Link className="text-primaryPurple " href="/signup">
+                Sign Up
               </Link>{' '}
             </p>
           </div>
