@@ -15,7 +15,7 @@ export default function Nav() {
       </div>
 
       <div className="hidden items-center gap-x-6 md:flex md:flex-row">
-        <Link href="/">Login</Link>
+        <Link href="/login">Login</Link>
         <Link
           href="/signup"
           className="border border-solid border-slate-300 px-3 py-2 rounded-lg"
