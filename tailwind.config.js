@@ -31,6 +31,13 @@ module.exports = {
         darkishBlueGray: '#0F172A',
         gray: '#344054',
         ash: '#D0D5DD',
+        darkishgray: "#344054",
+        lightishblue: "#FCE5FD",
+        primaryOrange: "#F16A1B",
+        textGray: "#A0A0A0",
+        textishred: "#E25C5C",
+        textyellow: "#53D258"
+
       },
     },
   },
