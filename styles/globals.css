@@ -23,23 +23,30 @@ a {
 main{
   height: 100vh;
 }
-/* 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  /* body {
-    color: white;
-    background: black;
-  } */
-/* } */
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: white;
+.loader {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 25px 0 #fff, -25px 0 #fff;
+  position: absolute;
+  animation: flash 0.5s ease-out infinite alternate;
+}
+
+
+@keyframes flash {
+  0% {
+    background-color: #fff2;
+    box-shadow: 25px 0 #fff2, -25px 0 #fff;
   }
-  body {
-    color: black;
-    background: white;
+  50% {
+    background-color: #fff;
+    box-shadow: 25px 0 #fff2, -25px 0 #fff2;
   }
-} */
+  100% {
+    background-color: #fff2;
+    box-shadow: 25px 0 #fff, -25px 0 #fff2;
+  }
+}
+
