@@ -24,7 +24,7 @@ import { useEffect, useMemo, useState } from 'react';
 import home from '../public/images/home.png';
 import dynamic from 'next/dynamic';
 
-const trades = () => {
+const Trades = () => {
   return (
     <div>
       <div className="w-full flex flex-col xl:flex-row">
@@ -156,4 +156,4 @@ const trades = () => {
   );
 };
 
-export default trades;
+export default Trades;
