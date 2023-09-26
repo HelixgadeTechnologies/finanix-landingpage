@@ -30,30 +30,7 @@ const { CountryList } = dynamic(() => import('country-list-with-dial-code-and-fl
 
 
 
-const profile = () => {
-
-    const [countries, setCountries] = useState([])
-
-
-
-    // // const [value, setValue] = useState('')
-    // // const options = useMemo(() => countryList().getData(), [])
-  
-    // // const changeHandler = (e) => {
-    // //   setValue(e.target.value)
-    // // }
-  
-    
-    function changeHandler(event) {
-        event.preventDefault()
-        CountryList.getAll()
-        setCountries(CountryList)
-    console.log(countries, "<<< COUNTRIES")
-    }
-    
-
-
-
+const trades = () => {
     return (
         <div>
 
@@ -155,4 +132,4 @@ const profile = () => {
     )
 }
 
-export default profile
+export default trades
