@@ -14,8 +14,7 @@ import Link from "next/link"
 import settings from '../public/images/setting.png'
 import Avatar from '../public/images/Avatar.png'
 import logout from '../public/images/logout.png'
-// import menunavbar from '../public/images/menunavbar.png'
-// import Sidenav from "../components/Sidenav"
+import home from '../public/images/home.png'
 
 const Sidenav = () => {
 
@@ -50,8 +49,19 @@ const Sidenav = () => {
               <div className="md:w-full bg-white pt-8 px-3 border-r border-r-solid border-r-slate-400 flex flex-col gap-4">
                     <Image src={dashboardfinanixicon} width={150} height={75} alt="website logo" />
 
+                    <Link href="/">
+                        <div className="flex flex-row items-center gap-3 mt-8 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
+                            <div className="">
+                            <Image src={home} alt="my profile" className="rounded-full w-6 h-6" />
+                           </div>
+                            <li className="list-none text-darkishgray text-lg">
+                           Home
+                            </li>
+                        </div>
+                    </Link> 
+                              
                     <Link href="/profile">
-                        <div className="flex flex-row gap-3 mt-8 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
+                        <div className="flex flex-row gap-3 mt-3 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <div className="shadow-lg rounded-full">
                             <Image src={personalaccounticon} alt="my profile" className="rounded-full w-6 h-6" />
                            </div>

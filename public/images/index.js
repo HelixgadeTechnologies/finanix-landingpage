@@ -50,6 +50,7 @@ import cloudicon from './cloudicon.png'
 import personalaccounticon from './personalaccounticon.png'
 import US from './US.png'
 import modalicon from './modalicon.png'
+import home from './home.png'
 
 
 
@@ -105,6 +106,7 @@ export default {
     cloudicon,
     personalaccounticon,
     US,
-    modalicon
+    modalicon,
+    home
 }
 
