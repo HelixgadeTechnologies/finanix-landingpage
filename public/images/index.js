@@ -46,6 +46,9 @@ import percentagecircle from './percentagecircle.png'
 import Arrowup from './Arrowup.png'
 import menunavbar from './menunavbar.png'
 import closeIcon from './closeIcon.png'
+import cloudicon from './cloudicon.png'
+import personalaccounticon from './personalaccounticon.png'
+import US from './US.png'
 
 
 
@@ -97,6 +100,9 @@ export default {
     Walletfill,
     percentagecircle,
     menunavbar,
-    closeIcon
+    closeIcon,
+    cloudicon,
+    personalaccounticon,
+    US
 }
 

@@ -36,7 +36,10 @@ module.exports = {
         primaryOrange: "#F16A1B",
         textGray: "#A0A0A0",
         textishred: "#E25C5C",
-        textyellow: "#53D258"
+        textyellow: "#53D258",
+        backgroundgray: "#FCFCFD",
+        textdarkgray: "#344054",
+        profiletextgray: "#667085"
 
       },
     },
