@@ -2,12 +2,16 @@ import { useState } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import toast, { Toaster } from 'react-hot-toast';
+import cookie from 'react-cookies';
 
 import supabase from '../config/supabase.config';
 
 const SignUp = () => {
+  const router = useRouter();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -21,6 +25,8 @@ const SignUp = () => {
       });
       if (error) throw error;
       console.log(data);
+      cookie.save('user', data.user);
+      router.push('/profile');
     } catch (error) {
       console.error(error.message);
       toast(error.message);
@@ -87,6 +93,7 @@ const SignUp = () => {
             <input
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="Example@email.com"
+              name="email"
               onClick={(e) => setEmail(e.target.value)}
             />
 

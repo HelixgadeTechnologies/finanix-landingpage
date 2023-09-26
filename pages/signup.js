@@ -14,6 +14,8 @@ const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const signUp = async () => {
+    console.log({ firstName, lastName, email, password });
+
     try {
       setIsLoading(true);
       let { data, error } = await supabase.auth.signUp({
@@ -24,6 +26,8 @@ const SignUp = () => {
           data: {
             firstName,
             lastName,
+            avatar:
+              'https://qwpqhfvjvbzxwgovbape.supabase.co/storage/v1/object/sign/avatars/Default_profile.svg.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJhdmF0YXJzL0RlZmF1bHRfcHJvZmlsZS5zdmcucG5nIiwiaWF0IjoxNjk1NzM5NjU5LCJleHAiOjE3MjcyNzU2NTl9.Lxq5C26R-amsNAFvV6AFuf_xecpCI47QNCA88QWsUOU&t=2023-09-26T14%3A47%3A39.195Z',
           },
         },
       });
@@ -42,7 +46,7 @@ const SignUp = () => {
       const { user, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
       });
-      x;
+
       console.log('user', user);
 
       if (error) throw error;
