@@ -178,11 +178,11 @@ const Compliance = () => {
               <li>
                 Fair Practices and Transparency: We maintain a commitment to
                 fair practices and transparency in all our dealings, ensuring
-                that our clients' interests are always at the forefront.
+                that our clients&apos interests are always at the forefront.
               </li>
               <li>
-                For any compliance-related inquiries or concerns, please don't
-                hesitate to contact our dedicated compliance team.
+                For any compliance-related inquiries or concerns, please
+                don&apost hesitate to contact our dedicated compliance team.
               </li>
             </ol>
           </div>
