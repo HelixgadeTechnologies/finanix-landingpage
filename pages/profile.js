@@ -20,6 +20,7 @@ import menunavbar from '../public/images/menunavbar.png'
 import Sidenav from "../components/Sidenav"
 import cloudicon from '../public/icons/cloudicon.png'
 import US from '../public/images/US.png'
+import home from '../public/images/home.png'
 import { useEffect, useMemo, useState } from "react"
 import dynamic from 'next/dynamic'
 
@@ -61,9 +62,19 @@ const profile = () => {
                 <div className="md:w-96 pt-8 px-3 border-r border-r-solid border-r-slate-300 hidden xl:flex xl:flex-col md:gap-4">
                     <Image src={dashboardfinanixicon} width={150} height={75} alt="website logo" />
                   
-
                     <Link href="/">
-                        <div className="flex flex-row gap-3 mt-8 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
+                        <div className="flex flex-row items-center gap-3 mt-8 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
+                            <div className="">
+                            <Image src={home} alt="my profile" className="rounded-full w-6 h-6" />
+                           </div>
+                            <li className="list-none text-darkishgray text-lg">
+                           Home
+                            </li>
+                        </div>
+                    </Link> 
+
+                    <Link href="/profile">
+                        <div className="flex flex-row gap-3 mt-3 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <div className="shadow-lg rounded-full">
                             <Image src={personalaccounticon} alt="my profile" className="rounded-full w-6 h-6" />
                            </div>
@@ -73,7 +84,7 @@ const profile = () => {
                         </div>
                     </Link>
                     
-                    <Link href="/">
+                    <Link href="/dashboard">
                         <div className="flex flex-row gap-3 mt-3 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <Image src={chart} alt="chart" className="w-6 h-6" />
                             <li className="list-none text-darkishgray text-lg md:text-md">
@@ -82,7 +93,7 @@ const profile = () => {
                         </div>
                     </Link>
                     
-                    <Link href="/">
+                    <Link href="/trades">
                         <div className="flex flex-row gap-3 mt-3 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <Image src={statusup} alt="status up" className="w-6 h-6" />
                             <li className="list-none text-darkishgray text-lg md:text-md">
@@ -104,7 +115,7 @@ const profile = () => {
                     </Link>
                     
                     <div className="mt-56 flex-col gap-12">
-                        <Link href="/">
+                        <Link href="/settings">
                         <div className="flex flex-row items-center gap-3 hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <Image src={settings} alt="settings" className="w-6 h-6" />
                             <h2 className="text-lg text-darkishgray font-semibold">Settings</h2>
