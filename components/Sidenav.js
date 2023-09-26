@@ -2,10 +2,11 @@ import menunavbar from '../public/images/menunavbar.png'
 import closeIcon from '../public/icons/closeIcon.svg'
 import { useState } from 'react'
 // import Image from 'next/image'
+import personalaccounticon from '../public/images/personalaccounticon.png'
 import Footer from "../components/Footer"
 import dashboardfinanixicon from "../public/images/dashboardfinanixicon.png"
 import Image from "next/image"
-import profile from '../public/images/profile.png'
+// import profile from '../public/images/profile.png'
 import receiptitem from '../public/images/receiptitem.png'
 import statusup from '../public/images/statusup.png'
 import chart from '../public/images/chart.png'
@@ -49,10 +50,10 @@ const Sidenav = () => {
               <div className="md:w-full bg-white pt-8 px-3 border-r border-r-solid border-r-slate-400 flex flex-col gap-4">
                     <Image src={dashboardfinanixicon} width={150} height={75} alt="website logo" />
 
-                    <Link href="/">
+                    <Link href="/profile">
                         <div className="flex flex-row gap-3 mt-8 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <div className="shadow-lg rounded-full">
-                            <Image src={profile} alt="my profile" className="rounded-full w-6 h-6" />
+                            <Image src={personalaccounticon} alt="my profile" className="rounded-full w-6 h-6" />
                            </div>
                             <li className="list-none text-darkishgray text-lg">
                             My Profile
@@ -60,7 +61,7 @@ const Sidenav = () => {
                         </div>
                     </Link>
                     
-                    <Link href="/">
+                    <Link href="/dashboard">
                         <div className="flex flex-row gap-3 mt-3 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <Image src={chart} alt="chart" className="w-6 h-6" />
                             <li className="list-none text-darkishgray text-lg">
@@ -90,7 +91,7 @@ const Sidenav = () => {
                         </div>
                     </Link>
                     
-                    <div className="mt-24 flex-col gap-12">
+                    <div className="mt-56 flex-col gap-12">
                         <Link href="/">
                         <div className="flex flex-row items-center gap-3 hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <Image src={settings} alt="settings" className="w-6 h-6" />
@@ -105,11 +106,11 @@ const Sidenav = () => {
                         </div>
                         </Link>
 
-                        <div className="flex flex-col items-start gap-4 mt-8 border-t border-slate-300 pt-6">
-                            <Image src={Avatar} alt="avatar" className="w-10 h-10" />
+                        <div className="flex flex-row items-center gap-4 mt-8 border-t border-slate-300 pt-6">
+                            <Image src={Avatar} alt="avatar" className="w-8 h-8" />
                             <div>
                             <h2 className="text-lg text-primaryPurple font-semibold">Tony Stark</h2>
-                            <h2 className="text-lg">tonystark@gmail4u.com</h2>
+                            <h2 className="text-md">tonystark@gmail4u.com</h2>
                             </div>
                         </div>
 

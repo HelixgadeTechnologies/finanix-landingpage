@@ -1,7 +1,7 @@
 import Footer from "../components/Footer"
 import dashboardfinanixicon from "../public/images/dashboardfinanixicon.png"
 import Image from "next/image"
-import profile from '../public/images/profile.png'
+import profileimage from '../public/images/profile.png'
 import receiptitem from '../public/images/receiptitem.png'
 import statusup from '../public/images/statusup.png'
 import chart from '../public/images/chart.png'
@@ -33,7 +33,7 @@ const dashboard = () => {
                     <Link href="/">
                         <div className="flex flex-row gap-3 mt-8 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <div className="shadow-lg rounded-full">
-                            <Image src={profile} alt="my profile" className="rounded-full w-6 h-6" />
+                            <Image src={profileimage} alt="my profile" className="rounded-full w-6 h-6" />
                            </div>
                             <li className="list-none text-darkishgray text-lg md:text-md">
                             My Profile
