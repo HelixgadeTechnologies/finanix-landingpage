@@ -49,6 +49,7 @@ import closeIcon from './closeIcon.png'
 import cloudicon from './cloudicon.png'
 import personalaccounticon from './personalaccounticon.png'
 import US from './US.png'
+import modalicon from './modalicon.png'
 
 
 
@@ -103,6 +104,7 @@ export default {
     closeIcon,
     cloudicon,
     personalaccounticon,
-    US
+    US,
+    modalicon
 }
 

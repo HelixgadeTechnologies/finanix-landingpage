@@ -39,7 +39,9 @@ module.exports = {
         textyellow: "#53D258",
         backgroundgray: "#FCFCFD",
         textdarkgray: "#344054",
-        profiletextgray: "#667085"
+        profiletextgray: "#667085",
+        modalGreen: "#53D258",
+        modaltextgray: "#475467"
 
       },
     },
