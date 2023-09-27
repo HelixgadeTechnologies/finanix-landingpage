@@ -42,7 +42,9 @@ module.exports = {
         profiletextgray: "#667085",
         modalGreen: "#53D258",
         modaltextgray: "#475467",
-        headingcolorgray: "#101828"
+        headingcolorgray: "#101828",
+        activeplan: "#CFCFCF",
+        spansubscriptioncolor: "#CCDDF0"
 
       },
     },
