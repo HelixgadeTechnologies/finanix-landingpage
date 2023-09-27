@@ -3,7 +3,7 @@ import Footer from './Footer';
 
 import { useRouter } from 'next/router';
 
-const noLayout = ['/login', '/signup', '/dashboard', '/profile', '/trades','/settings', '/compliance'];
+const noLayout = ['/login', '/signup', '/dashboard', '/profile', '/trades','/settings', '/compliance', '/confirmation'];
 
 export default function Layout({ children }) {
   const router = useRouter();
