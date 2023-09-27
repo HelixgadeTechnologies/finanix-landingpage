@@ -80,7 +80,7 @@ const Sidenav = () => {
                         </div>
                     </Link>
                     
-                    <Link href="/">
+                    <Link href="/trades">
                         <div className="flex flex-row gap-3 mt-3 font-semibold hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <Image src={statusup} alt="status up" className="w-6 h-6" />
                             <li className="list-none text-darkishgray text-lg">
@@ -102,7 +102,7 @@ const Sidenav = () => {
                     </Link>
                     
                     <div className="mt-56 flex-col gap-12">
-                        <Link href="/">
+                        <Link href="/settings">
                         <div className="flex flex-row items-center gap-3 hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
                             <Image src={settings} alt="settings" className="w-6 h-6" />
                             <h2 className="text-lg text-darkishgray font-semibold">Settings</h2>
