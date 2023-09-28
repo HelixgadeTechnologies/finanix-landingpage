@@ -36,8 +36,13 @@ const Profile = () => {
   const [phone, setPhone] = useState('');
   const [avatar, setAvatar] = useState('');
 
-  const setDefault = () => {
-    const user = cookie.load('user');
+  const setDefault = async () => {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    console.log('userData', user);
+
+    // const user = cookie.load('user');
 
     setUser(user);
     const { firstName, lastName, role, country, phone, avatar } =

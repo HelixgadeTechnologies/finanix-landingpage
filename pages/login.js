@@ -17,12 +17,15 @@ const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const login = async () => {
+    console.log({ email, password });
     try {
       setIsLoading(true);
       let { data, error } = await supabase.auth.signInWithPassword({
-        email,
+        email: email,
         password,
       });
+
+      console.log('error', error);
       if (error) throw error;
       console.log(data);
       cookie.save('user', data.user);
@@ -37,9 +40,14 @@ const SignUp = () => {
 
   const googleSignIn = async () => {
     try {
-      const { user, error } = await supabase.auth.signInWithOAuth({
-        provider: 'google',
-      });
+      const { user, error } = await supabase.auth.signInWithOAuth(
+        {
+          provider: 'google',
+        },
+        {
+          redirectTo: 'https://finanix-landingpage-fawn.vercel.app/profile',
+        }
+      );
 
       console.log('user', user);
 

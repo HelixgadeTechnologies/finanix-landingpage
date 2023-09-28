@@ -15,7 +15,6 @@ const SignUp = () => {
 
   const signUp = async () => {
     console.log({ firstName, lastName, email, password });
-
     try {
       setIsLoading(true);
       let { data, error } = await supabase.auth.signUp({
