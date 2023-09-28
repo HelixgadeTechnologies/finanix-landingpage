@@ -26,16 +26,18 @@ import dynamic from 'next/dynamic';
 
 const Confirmation = () => {
   return (
-  
-        <div className="w-full">
-          <div className="w-full bg-backgroundgray p-6 md:min-h-screen">
-            {/* <div className='w-full flex flex-col'> */}
-            <h2 className="text-headingcolorgray text-3xl pt-8 pb-3 font-roboto font-semibold">
-            Please check your email.
-            </h2>
-            <p className='text-slate-600'> We've sent a code to tonystark@gmail4u.com </p>              
-           </div>
-          </div>
+    <div className="w-full">
+      <div className="w-full bg-backgroundgray p-6 md:min-h-screen">
+        {/* <div className='w-full flex flex-col'> */}
+        <h2 className="text-headingcolorgray text-3xl pt-8 pb-3 font-roboto font-semibold">
+          Please check your email.
+        </h2>
+        <p className="text-slate-600">
+          {' '}
+          We&lsquove sent a code to tonystark@gmail4u.com{' '}
+        </p>
+      </div>
+    </div>
   );
 };
 
