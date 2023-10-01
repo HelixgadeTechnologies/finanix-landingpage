@@ -23,8 +23,17 @@ import US from '../public/images/US.png';
 import { useEffect, useMemo, useState } from 'react';
 import home from '../public/images/home.png';
 import dynamic from 'next/dynamic';
+import TradesModalset from './tradesmodalset';
 
 const Trades = () => {
+
+  const [isTradeModalShown, setIsTradeModalShown] = useState(true);
+
+  const handleToggleModal = () => {
+    setIsTradeModalShown(false);
+  };
+  
+
   return (
     <div>
       <div className="w-full flex flex-col xl:flex-row">
@@ -145,6 +154,7 @@ const Trades = () => {
           <div className="w-full bg-backgroundgray p-6 md:min-h-screen">
             <h2 className="text-black text-3xl py-8 font-roboto font-semibold">
               My Trades
+              {isTradeModalShown && <TradesModalset onHandleModal={handleToggleModal} />}
             </h2>
           </div>
           <div>

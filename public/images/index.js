@@ -51,12 +51,15 @@ import personalaccounticon from './personalaccounticon.png'
 import US from './US.png'
 import modalicon from './modalicon.png'
 import home from './home.png'
-
+import menu from './menu.png'
+import homeprofile from './homeprofile.png'
+import homelinear from './homelinear.png'
 
 
 export default {
     logo,
     Arrowup,
+    homelinear,
     illustration,
     vector,
     tether98,
@@ -107,6 +110,8 @@ export default {
     personalaccounticon,
     US,
     modalicon,
-    home
+    home,
+    menu,
+    homeprofile
 }
 
