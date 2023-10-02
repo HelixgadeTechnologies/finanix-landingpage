@@ -87,7 +87,7 @@ const HomeSidenav = () => {
                     {user?.user_metadata?.firstName}{' '}
                     {user?.user_metadata?.lastName}
                   </h2>
-                  <h2 className="text-md">{user.email}</h2>
+                  <h2 className="text-md">{user?.email}</h2>
                 </div>
               </div>
 
