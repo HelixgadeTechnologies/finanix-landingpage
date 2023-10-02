@@ -130,21 +130,50 @@ export default function Home() {
         </h1>
         <div className="py-32 w-full p-3 relative md:bg-lightGray">
           <div className="flex flex-col gap-12 md:flex-row md:justify-center md:absolute md:-top-20 md:inset-x-0">
-            <Image
-              src={creataccount}
-              alt="account creation"
-              className="w-full md:w-72 md:h-72"
-            />
-            <Image
-              src={addfunds}
-              alt="add funds to your account"
-              className="w-full md:w-72 md:h-72"
-            />
+            {/* 
+            
             <Image
               src={planchoice}
               alt="choose a plan"
               className="w-full md:w-72 md:h-72"
+            /> */}
+
+            <div className='w-72 border border-solid bg-white border-slate-300 text-center px-3 py-8 rounded-xl z-[1000]'>
+            <Image
+              src={creataccount}
+              alt="account creation"
+              className="w-44 mx-auto"
             />
+              <h1 className='text-2xl font-semibold mt-8 mb-3'>Create an Account</h1>
+              <p className='text-sm text-landingpagegray'>
+              Sign Up with your Email or Mobile in just 5 minutes
+              </p>
+            </div>
+
+            <div className='w-72 border border-solid bg-white border-slate-300 text-center px-3 py-8 rounded-xl z-[1000]'>
+            <Image
+              src={addfunds}
+              alt="add funds to your account"
+              className="w-24 mx-auto"
+            />
+              <h1 className='text-2xl font-semibold mt-8 mb-3'>Add Funds</h1>
+              <p className='text-sm text-landingpagegray'>
+              Quickly add funds to your investment 
+              wallet
+              </p>
+            </div>
+
+            <div className='w-72 border border-solid bg-white border-slate-300 text-center px-3 py-8 rounded-xl z-[1000]'>
+            <Image
+              src={planchoice}
+              alt="choose a plan"
+              className="w-24 mx-auto"
+            />
+              <h1 className='text-2xl font-semibold mt-8 mb-3'>Choose a Plan</h1>
+              <p className='text-sm text-landingpagegray'>
+              Trade Instantly, Profit Swiftly
+              </p>
+            </div>
           </div>
         </div>
 

@@ -45,7 +45,8 @@ module.exports = {
         headingcolorgray: "#101828",
         activeplan: "#CFCFCF",
         spansubscriptioncolor: "#CCDDF0",
-        tradesred: "#D92D20"
+        tradesred: "#D92D20",
+        landingpagegray: "#626262"
 
       },
     },

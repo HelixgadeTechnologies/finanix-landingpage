@@ -60,14 +60,15 @@ const HomeSidenav = () => {
               } ease-in-out duration-300`}
         >
           <button
-            className="bg-primaryPurple text-black absolute top-6 right-0"
+            className="bg-primaryPurple w-fit absolute top-6 right-3 "
             onClick={() => setIsOpen(!isOpen)}
           >
-            <Image
+            {/* <Image
               className="w-12 bg-transparent"
               src={homecloseicon}
               alt="close icon"
-            />
+            /> */}
+           <h1 className='text-4xl text-white'> x</h1>
           </button>
 
           <div>
