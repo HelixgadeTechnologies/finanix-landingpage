@@ -27,7 +27,7 @@ const SignUp = () => {
 
       console.log('error', error);
       if (error) throw error;
-      console.log(data);
+      console.log('login user', data);
       cookie.save('user', data.user);
       router.push('/profile');
     } catch (error) {

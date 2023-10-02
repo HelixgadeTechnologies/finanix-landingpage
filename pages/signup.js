@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import toast, { Toaster } from 'react-hot-toast';
 
 import supabase from '../config/supabase.config';
 
 const SignUp = () => {
+  const router = useRouter();
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -32,6 +35,7 @@ const SignUp = () => {
       });
       if (error) throw error;
       console.log(data);
+      router.push(`/confirmation/${email}`);
     } catch (error) {
       console.error(error.message);
       toast(error.message);

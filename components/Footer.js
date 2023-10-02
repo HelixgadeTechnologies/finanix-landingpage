@@ -62,8 +62,9 @@ export default function Footer() {
               <h2 className="font-bold text-gray-400 md:text-white">
                 INFORMATION
               </h2>
-              <h3 className="text-black md:text-white">Compliance</h3>
-
+              <Link href="/compliance">
+                <h3 className="text-black md:text-white">Compliance</h3>
+              </Link>
               <p className="text-black md:text-white">Privacy Policy</p>
             </div>
 

@@ -1,15 +1,15 @@
-import FormDatas from '../components/FormData';
+import SubscribedMap from '../components/SubscribedMap';
 import Footer from '../components/Footer';
 import dashboardfinanixicon from '../public/images/dashboardfinanixicon.png';
 import Image from 'next/image';
 
 import Sidenav from '../components/Sidenav';
 
-//Components
 import SideBar from '../components/SideBar';
+
 import isAuthenticated from '../utils/isAuthenticated';
 
-const Settings = () => {
+const Subscription = () => {
   return (
     <div>
       <div className="w-full flex flex-col xl:flex-row">
@@ -26,14 +26,12 @@ const Settings = () => {
               <Sidenav />
             </div>
           </div>
-          <div className="w-full bg-backgroundgray p-6 md:min-h-screen">
-            <h2 className="text-black text-3xl py-8 font-roboto font-semibold">
-              Settings
+          <div className="w-full bg-backgroundgray p-2 md:min-h-screen">
+            <h2 className="text-black text-3xl py-8  px-3 font-roboto font-semibold">
+              Available Packages
             </h2>
 
-            <div>
-              <FormDatas />
-            </div>
+            <SubscribedMap />
           </div>
           <div>
             <Footer />
@@ -44,7 +42,7 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default Subscription;
 
 export async function getServerSideProps({ req }) {
   return isAuthenticated(req);
