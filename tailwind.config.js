@@ -44,7 +44,8 @@ module.exports = {
         modaltextgray: "#475467",
         headingcolorgray: "#101828",
         activeplan: "#CFCFCF",
-        spansubscriptioncolor: "#CCDDF0"
+        spansubscriptioncolor: "#CCDDF0",
+        tradesred: "#D92D20"
 
       },
     },
