@@ -102,7 +102,7 @@ const SignUp = () => {
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="Example@email.com"
               name="email"
-              onClick={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             <label className="text-[14px] text-gray font-medium">
@@ -112,7 +112,7 @@ const SignUp = () => {
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="At least 8 characters"
               type="password"
-              onClick={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
             <p className="text-xs">

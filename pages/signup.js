@@ -89,10 +89,13 @@ const SignUp = () => {
             <label className="text-[14px] text-gray font-medium">
               First Name*
             </label>
+
             <input
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="Enter your First Name"
-              onClick={(e) => setFirstName(e.target.value)}
+              type="text"
+              name="firstname"
+              onChange={(e) => setFirstName(e.target.value)}
             />
 
             <label className="text-[14px] text-gray font-medium">
@@ -101,14 +104,18 @@ const SignUp = () => {
             <input
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="Enter your Last Name"
-              onClick={(e) => setLastName(e.target.value)}
+              type="text"
+              name="lastname"
+              onChange={(e) => setLastName(e.target.value)}
             />
 
             <label className="text-[14px] text-gray font-medium">Email*</label>
             <input
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="Example@email.com"
-              onClick={(e) => setEmail(e.target.value)}
+              type="text"
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             <label className="text-[14px] text-gray font-medium">
@@ -117,8 +124,9 @@ const SignUp = () => {
             <input
               className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
               placeholder="At least 8 characters"
+              name="password"
               type="password"
-              onClick={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
             <p className="text-xs">
