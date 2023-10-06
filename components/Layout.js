@@ -14,6 +14,8 @@ const noLayout = [
   '/confirmation',
   '/privacy',
   '/subscriptions',
+  '/forgot-password',
+  '/update-password',
 ];
 
 export default function Layout({ children }) {
