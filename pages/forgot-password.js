@@ -16,7 +16,6 @@ const ForgotPassword = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const forgotPassword = async () => {
-    console.log({ email });
     try {
       setIsLoading(true);
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
