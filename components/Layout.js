@@ -14,6 +14,7 @@ const noLayout = [
   '/confirmation',
   '/privacy',
   '/subscriptions',
+  '/about-us'
 ];
 
 export default function Layout({ children }) {
