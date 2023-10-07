@@ -16,6 +16,8 @@ import homesettings from '../public/icon home/homesettings.png';
 import homelogout from '../public/icon home/homelogout.png';
 import homecloseicon from '../public/icon home/homecloseicon.png';
 
+import supabase from '../config/supabase.config';
+
 const HomeSidenav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [user, setUser] = useState(null);
@@ -27,6 +29,12 @@ const HomeSidenav = () => {
 
     setUser(user);
   };
+
+  async function logout() {
+    await supabase.auth.signOut();
+    cookie.save('user', null);
+    setUser(null);
+  }
 
   useEffect(() => {
     checkAuth();
@@ -75,22 +83,24 @@ const HomeSidenav = () => {
             <div className="md:w-full h-screen bg-primaryPurple text-white pt-8 px-3 border-r border-r-solid border-r-slate-400 flex flex-col gap-4">
               <Image src={logo} alt="website logo" className="w-20 h-5" />
 
-              <div className="flex flex-row justify-around border-b border-slate-300 pt-6">
-                <Image
-                  src={user?.user_metadata?.avatar}
-                  alt="avatar"
-                  className="w-10 h-10"
-                  height={100}
-                  width={100}
-                />{' '}
-                <div>
-                  <h2 className="text-md font-semibold">
-                    {user?.user_metadata?.firstName}{' '}
-                    {user?.user_metadata?.lastName}
-                  </h2>
-                  <h2 className="text-md">{user?.email}</h2>
+              {user != 'null' ? (
+                <div className="flex flex-row justify-around border-b border-slate-300 pt-6">
+                  <Image
+                    src={user?.user_metadata?.avatar}
+                    alt="avatar"
+                    className="w-10 h-10"
+                    height={100}
+                    width={100}
+                  />{' '}
+                  <div>
+                    <h2 className="text-md font-semibold">
+                      {user?.user_metadata?.firstName}{' '}
+                      {user?.user_metadata?.lastName}
+                    </h2>
+                    <h2 className="text-md">{user?.email}</h2>
+                  </div>
                 </div>
-              </div>
+              ) : null}
 
               <Link href="/">
                 <div className="flex flex-row items-center gap-3 mt-8 font-semibold text-primaryPurple rounded-md p-2 bg-white">
@@ -165,16 +175,17 @@ const HomeSidenav = () => {
                     </div>
                   </Link>
 
-                  <Link href="/">
-                    <div className="flex flex-row items-center gap-3 hover:bg-white hover:text-primaryPurple hover:rounded-md p-2">
-                      <Image
-                        src={homelogout}
-                        alt="settings"
-                        className="w-6 h-6"
-                      />
-                      <h2 className="text-md font-semibold">Log Out</h2>
-                    </div>
-                  </Link>
+                  <div
+                    onClick={() => logout()}
+                    className="flex flex-row items-center gap-3 hover:bg-white hover:text-primaryPurple hover:rounded-md p-2"
+                  >
+                    <Image
+                      src={homelogout}
+                      alt="settings"
+                      className="w-6 h-6"
+                    />
+                    <h2 className="text-md font-semibold">Log Out</h2>
+                  </div>
                 </div>
               ) : (
                 <div>
