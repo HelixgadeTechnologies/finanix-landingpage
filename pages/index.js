@@ -129,14 +129,7 @@ export default function Home() {
           Get Started in Just A Few Minutes
         </h1>
         <div className="py-32 w-full p-3 relative md:bg-lightGray">
-          <div className="flex flex-col gap-12 md:flex-row md:justify-center md:absolute md:-top-20 md:inset-x-0">
-            {/* 
-            
-            <Image
-              src={planchoice}
-              alt="choose a plan"
-              className="w-full md:w-72 md:h-72"
-            /> */}
+          <div className="flex flex-col justify-center items-center gap-12 md:flex-row md:justify-center md:absolute md:-top-20 md:inset-x-0">
 
             <div className='w-72 border border-solid bg-white border-slate-300 text-center px-3 py-8 rounded-xl z-[1000]'>
             <Image

@@ -14,6 +14,7 @@ const noLayout = [
   '/confirmation',
   '/privacy',
   '/subscriptions',
+  '/about-us',
   '/forgot-password',
   '/update-password',
 ];
