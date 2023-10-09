@@ -32,8 +32,8 @@ const AboutUs = () => {
 
             <div className='text-textdarkgray'>
               <p className='text-textdarkgray text-lg'>
-                At Finanix, we believe in the power of financial freedom. We understand that each individual's
-                financial journey is unique, and that's<br/> why we're here to empower you with the tools and knowledge
+                At Finanix, we believe in the power of financial freedom. We understand that each individual&#39;s
+                financial journey is unique, and that&#39;s<br/> why we're here to empower you with the tools and knowledge
                 to achieve your financial goals, whatever they may be.
               </p>
 
@@ -87,7 +87,7 @@ const AboutUs = () => {
                 <li>
                   Transparency: We believe in transparent
                   and honest financial practices. You'll always
-                  know where your money is and how it's working for you.
+                  know where your money is and how it&#39;s working for you.
                 </li>
 
                 <li>
@@ -121,7 +121,7 @@ const AboutUs = () => {
               </p>
 
               <p className='text-lg mt-6 mb-6'>
-              Let's embark on this journey together. Welcome to Finanix, where financial prosperity begins.
+              Let&#39;s embark on this journey together. Welcome to Finanix, where financial prosperity begins.
               </p>
             </div>
           </div>
