@@ -12,14 +12,14 @@ export default function Nav() {
   const [user, setUser] = useState(null);
 
   const checkAuth = async () => {
-    const user = cookie.load('user');
+    const user = cookie.load('user') || 'null';
     setUser(user);
   };
 
   async function logout() {
     await supabase.auth.signOut();
-    cookie.save('user', null);
-    setUser(null);
+    cookie.save('user', 'null');
+    setUser('null');
   }
 
   useEffect(() => {
