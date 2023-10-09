@@ -33,7 +33,7 @@ const AboutUs = () => {
             <div className='text-textdarkgray'>
               <p className='text-textdarkgray text-lg'>
                 At Finanix, we believe in the power of financial freedom. We understand that each individual&#39;s
-                financial journey is unique, and that&#39;s<br/> why we're here to empower you with the tools and knowledge
+                financial journey is unique, and that&#39;s<br/> why we&#39;re here to empower you with the tools and knowledge
                 to achieve your financial goals, whatever they may be.
               </p>
 
@@ -58,7 +58,7 @@ const AboutUs = () => {
 
                 <li>
                   Diverse Investment Options: We offer a wide range
-                  of investment plans to suit your needs, whether you're
+                  of investment plans to suit your needs, whether you&#39;re
                   looking for short-term gains or <br/>long-term stability.
                 </li>
 
@@ -86,7 +86,7 @@ const AboutUs = () => {
               <ol className='list-decimal max-w-6xl text-lg ml-6 space-y-6 '>
                 <li>
                   Transparency: We believe in transparent
-                  and honest financial practices. You'll always
+                  and honest financial practices. You&#39;ll always
                   know where your money is and how it&#39;s working for you.
                 </li>
 
@@ -114,8 +114,8 @@ const AboutUs = () => {
                 Join the Finanix Family:
               </h2>
               <p className='text-lg'>
-                Your financial journey starts here. Whether you're new to investing
-                or a seasoned pro, Finanix is your trusted partner. We're here to provide
+                Your financial journey starts here. Whether you&#39;re new to investing
+                or a seasoned pro, Finanix is your trusted partner. We&#39;re here to provide
                 you with the knowledge, tools, and support you need to make informed financial
                 decisions and achieve your dreams.
               </p>
