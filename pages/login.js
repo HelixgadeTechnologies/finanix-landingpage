@@ -86,7 +86,7 @@ const SignUp = () => {
           },
         }}
       />
-      <div className="flex p-[24px] justify-between gap-10">
+      <div className="flex p-[24px] justify-between items-center gap-10">
         <div className="form  sm:w-1/2	sm:pt-32 sm:pl-32">
           <h1 className="text-[18px] sm:text-[40px] font-semibold font-inter">
             Log in to your account!
@@ -115,17 +115,9 @@ const SignUp = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
 
-            <p className="text-xs">
-              I have read the{' '}
-              <Link className="text-primaryPurple" href="/">
-                Privacy Policy
-              </Link>{' '}
-              and agree to the{' '}
-              <Link className="text-primaryPurple" href="/">
-                Compliance Terms
-              </Link>{' '}
-              of Finanix.
-            </p>
+            <p>
+              <Link className='text-primaryPurple font-bold' href={'/forgot-password'}>Forgot Password</Link>
+           </p>
 
             <button
               onClick={() => login()}
