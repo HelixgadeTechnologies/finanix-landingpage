@@ -1,36 +1,19 @@
-import { useEffect, useState } from 'react';
-
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
 import HomeSidenav from './HomeSidenav';
-import cookie from 'react-cookies';
 
-import supabase from '../config/supabase.config';
+//Context
+import { useAuth } from '../context';
 
 export default function Nav() {
-  const [user, setUser] = useState(null);
-
-  const checkAuth = async () => {
-    const user = cookie.load('user') || 'null';
-    setUser(user);
-  };
-
-  async function logout() {
-    await supabase.auth.signOut();
-    cookie.save('user', 'null');
-    setUser('null');
-  }
-
-  useEffect(() => {
-    checkAuth();
-  }, []);
+  const { user, logout } = useAuth();
 
   return (
     <div className="w-full bg-primaryPurple text-white p-3 gap-3 text-lg  border-b border-b-slate-400 flex flex-row justify-between md:items-center md:justify-around md:flex md:flex-row">
       <Image src={logo} alt="finanicIcon" className="w-28 h-6" />
 
-      {user !== 'null' ? (
+      {user ? (
         <div className="hidden gap-x-6 md:flex md:flex-row">
           <Link href="/profile">My Profile</Link>
           <Link href="/dashboard">Dashboard</Link>
@@ -40,7 +23,7 @@ export default function Nav() {
       ) : null}
 
       <div className="hidden items-center gap-x-6 md:flex md:flex-row">
-        {user === 'null' ? (
+        {!user ? (
           <div>
             <Link href="/login">Login</Link>
             <Link

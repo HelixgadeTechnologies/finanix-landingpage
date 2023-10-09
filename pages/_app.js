@@ -1,17 +1,15 @@
-import '../styles/globals.css'
-import Layout from '../components/Layout'
-import Head from 'next/head'
-import react from 'react'
+import '../styles/globals.css';
+import Layout from '../components/Layout';
+import UserContextProvider from '../context/UserContext';
 
 function _app({ Component, pageProps }) {
-
   return (
-       <Layout>
-     <Component {...pageProps} />
-    </Layout>
-
- )
-  
+    <UserContextProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </UserContextProvider>
+  );
 }
 
-export default _app
+export default _app;

@@ -4,12 +4,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
+import { useAuth } from '../context/UserContext';
+
 import toast, { Toaster } from 'react-hot-toast';
 import cookie from 'react-cookies';
 
 import supabase from '../config/supabase.config';
 
-const SignUp = () => {
+const Login = () => {
+  const { setUser } = useAuth();
+
   const router = useRouter();
 
   const [email, setEmail] = useState('');
@@ -17,7 +21,6 @@ const SignUp = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const login = async () => {
-    console.log({ email, password });
     try {
       setIsLoading(true);
       let { data, error } = await supabase.auth.signInWithPassword({
@@ -29,6 +32,8 @@ const SignUp = () => {
       if (error) throw error;
       console.log('login user', data);
       cookie.save('user', data.user);
+      setUser(data.user);
+
       router.push('/profile');
     } catch (error) {
       console.error(error.message);
@@ -166,7 +171,7 @@ const SignUp = () => {
 
             <p className="text-center">
               Already have an account?{' '}
-              <Link className="text-primaryPurple " href="/signup">
+              <Link className="text-primaryPurple " href="/Login">
                 Sign Up
               </Link>{' '}
             </p>
@@ -179,4 +184,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;

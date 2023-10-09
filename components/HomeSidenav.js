@@ -1,11 +1,9 @@
 import menu from '../public/icons/menu.png';
-import { useState, useEffect } from 'react';
-import cookie from 'react-cookies';
+import { useState } from 'react';
 
 import Image from 'next/image';
 
 import Link from 'next/link';
-import Avatar from '../public/images/Avatar.png';
 import home from '../public/images/home.png';
 import logo from '../public/images/logo.png';
 import homeprofile from '../public/icon home/homeprofile.png';
@@ -14,31 +12,19 @@ import homestatusbar from '../public/icon home/homestatusbar.png';
 import homereceiptitem from '../public/icon home/homereceiptitem.png';
 import homesettings from '../public/icon home/homesettings.png';
 import homelogout from '../public/icon home/homelogout.png';
-import homecloseicon from '../public/icon home/homecloseicon.png';
 
-import supabase from '../config/supabase.config';
+//Context
+import { useAuth } from '../context';
 
 const HomeSidenav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState(null);
 
-  const checkAuth = async () => {
-    const user = cookie.load('user');
+  const { user, logout } = useAuth();
 
-    console.log('sidebar user', user);
-
-    setUser(user);
+  const handleLogout = () => {
+    setIsOpen(false);
+    logout();
   };
-
-  async function logout() {
-    await supabase.auth.signOut();
-    cookie.save('user', null);
-    setUser(null);
-  }
-
-  useEffect(() => {
-    checkAuth();
-  }, []);
 
   return (
     <>
@@ -71,19 +57,14 @@ const HomeSidenav = () => {
             className="bg-primaryPurple w-fit absolute top-6 right-3 "
             onClick={() => setIsOpen(!isOpen)}
           >
-            {/* <Image
-              className="w-12 bg-transparent"
-              src={homecloseicon}
-              alt="close icon"
-            /> */}
-           <h1 className='text-4xl text-white'> x</h1>
+            <h1 className="text-4xl text-white"> x</h1>
           </button>
 
           <div>
             <div className="md:w-full h-screen bg-primaryPurple text-white pt-8 px-3 border-r border-r-solid border-r-slate-400 flex flex-col gap-4">
               <Image src={logo} alt="website logo" className="w-20 h-5" />
 
-              {user != 'null' ? (
+              {user ? (
                 <div className="flex flex-row justify-around border-b border-slate-300 pt-6">
                   <Image
                     src={user?.user_metadata?.avatar}
@@ -115,7 +96,7 @@ const HomeSidenav = () => {
                 </div>
               </Link>
 
-              {user !== 'null' ? (
+              {user ? (
                 <div>
                   <Link href="/profile">
                     <div className="flex flex-row gap-3 mt-3 font-semibold hover:bg-white hover:text-primaryPurple hover:rounded-md p-2">
@@ -176,7 +157,7 @@ const HomeSidenav = () => {
                   </Link>
 
                   <div
-                    onClick={() => logout()}
+                    onClick={() => handleLogout()}
                     className="flex flex-row items-center gap-3 hover:bg-white hover:text-primaryPurple hover:rounded-md p-2"
                   >
                     <Image
