@@ -121,8 +121,13 @@ const Login = () => {
             />
 
             <p>
-              <Link className='text-primaryPurple font-bold' href={'/forgot-password'}>Forgot Password</Link>
-           </p>
+              <Link
+                className="text-primaryPurple font-bold"
+                href={'/forgot-password'}
+              >
+                Forgot Password
+              </Link>
+            </p>
 
             <button
               onClick={() => login()}

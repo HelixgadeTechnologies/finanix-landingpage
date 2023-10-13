@@ -17,12 +17,16 @@ import { useEffect, useState } from 'react';
 import supabase from '../config/supabase.config';
 import isAuthenticated from '../utils/isAuthenticated';
 
+//Context
+import { useAuth } from '../context';
+
 const Profile = () => {
   const fileInputRef = useRef();
+  const { user, logout } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [role, setRole] = useState('');
@@ -31,9 +35,9 @@ const Profile = () => {
   const [avatar, setAvatar] = useState('');
 
   const setDefault = async () => {
-    const user = cookie.load('user');
+    // const user = cookie.load('user');
 
-    setUser(user);
+    // setUser(user);
     const { firstName, lastName, role, country, phone, avatar } =
       user.user_metadata;
 
