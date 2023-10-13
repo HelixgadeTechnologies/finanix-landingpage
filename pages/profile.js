@@ -1,4 +1,6 @@
 'use client';
+import Link from 'next/link';
+
 import { useRef } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import cookie from 'react-cookies';
@@ -35,7 +37,8 @@ const Profile = () => {
   const [avatar, setAvatar] = useState('');
 
   const setDefault = async () => {
-    // const user = cookie.load('user');
+    const user = cookie.load('user');
+    console.log('userrr', user);
 
     // setUser(user);
     const { firstName, lastName, role, country, phone, avatar } =
@@ -58,6 +61,20 @@ const Profile = () => {
       const { data, error } = await supabase.auth.updateUser({
         data: { firstName, lastName, role, country, phone, avatar },
       });
+
+      const user = cookie.load('user');
+
+      user.user_metadata = {
+        ...user.user_metadata,
+        firstName,
+        lastName,
+        role,
+        country,
+        phone,
+        avatar,
+      };
+
+      cookie.save('user', user);
 
       toast('Update Successfull!');
 
@@ -126,11 +143,13 @@ const Profile = () => {
 
         <div className="w-full">
           <div className="p-2 flex flex-row w-full justify-between items-center xl:hidden">
-            <Image
-              src={dashboardfinanixicon}
-              alt="finanix icon"
-              className="w-30 h-8"
-            />
+            <Link href="/">
+              <Image
+                src={dashboardfinanixicon}
+                alt="finanix icon"
+                className="w-30 h-8"
+              />
+            </Link>
             <div>
               <Sidenav />
             </div>

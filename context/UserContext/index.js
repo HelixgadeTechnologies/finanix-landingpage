@@ -18,7 +18,7 @@ const UserContextProvider = ({ children }) => {
         data: { user },
       } = await supabase.auth.getUser();
 
-      console.log('user context', user);
+      // console.log('user context', user);
       setUser(user);
       cookie.save('user', user);
     } catch (error) {

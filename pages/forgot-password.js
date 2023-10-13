@@ -13,7 +13,9 @@ const ForgotPassword = () => {
   const router = useRouter();
 
   const [email, setEmail] = useState('');
+
   const [isLoading, setIsLoading] = useState(false);
+  const [showText, setShowText] = useState(false);
 
   const forgotPassword = async () => {
     try {
@@ -23,15 +25,17 @@ const ForgotPassword = () => {
           'https://finanix-landingpage-fawn.vercel.app/update-password',
       });
 
-      console.log('error', error);
       if (error) throw error;
 
-      //   router.push('/profile');
+      setShowText(true);
+
+      console.log(showText, email.length);
     } catch (error) {
-      console.error(error.message);
+      console.error(error);
       toast(error.message);
     } finally {
       setIsLoading(false);
+      setShowText(false);
     }
   };
 
@@ -51,40 +55,50 @@ const ForgotPassword = () => {
           },
         }}
       />
-      <div className="flex flex-col	sm:flex-row p-[24px] sm:justify-between gap-10 ">
-        <div className="form  sm:w-1/2	sm:pt-32 sm:pl-32">
-          <h1 className="text-[18px] sm:text-[40px] font-semibold font-inter">
-            Recover Password
-          </h1>
-
-          <p className="py-1 text-[14px] text-[#475467] mb-4">
-            Please enter your email
-          </p>
-
-          <div className="sm:pr-10">
-            <label className="text-[14px] text-gray font-medium">Email*</label>
-            <input
-              className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
-              placeholder="Example@email.com"
-              name="email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-
-            <button
-              onClick={() => forgotPassword()}
-              className="block w-full py-2.5 px-5 bg-primaryPurple text-white mt-4 rounded-lg"
-            >
-              {!isLoading ? (
-                <span>Submit</span>
-              ) : (
-                <div className="">Loading...</div>
-              )}{' '}
-            </button>
-          </div>
+      {showText && email.length ? (
+        <div className="h-screen flex flex-col justify-center">
+          <h2 className="text-center text-2xl	">
+            Instructions have been sent to your email <b>{email}</b>
+          </h2>
         </div>
+      ) : (
+        <div className="flex flex-col	sm:flex-row p-[24px] sm:justify-between gap-10 ">
+          <div className="form  sm:w-1/2	sm:pt-32 sm:pl-32">
+            <h1 className="text-[18px] sm:text-[40px] font-semibold font-inter">
+              Recover Password
+            </h1>
 
-        <div className="image bg-auth-background bg-no-repeat	bg-center	 w-1/2 hidden sm:block rounded-3xl	"></div>
-      </div>
+            <p className="py-1 text-[14px] text-[#475467] mb-4">
+              Please enter your email
+            </p>
+
+            <div className="sm:pr-10">
+              <label className="text-[14px] text-gray font-medium">
+                Email*
+              </label>
+              <input
+                className="block border border-solid border-ash rounded-lg w-full py-2.5 px-3.5 mt-1 mb-4"
+                placeholder="Example@email.com"
+                name="email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <button
+                onClick={() => forgotPassword()}
+                className="block w-full py-2.5 px-5 bg-primaryPurple text-white mt-4 rounded-lg"
+              >
+                {!isLoading ? (
+                  <span>Submit</span>
+                ) : (
+                  <div className="">Loading...</div>
+                )}{' '}
+              </button>
+            </div>
+          </div>
+
+          <div className="image bg-auth-background bg-no-repeat	bg-center	 w-1/2 hidden sm:block rounded-3xl	"></div>
+        </div>
+      )}
     </div>
   );
 };
