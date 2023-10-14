@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,10 +11,13 @@ import receiptitem from '../public/images/receiptitem.png';
 import statusup from '../public/images/statusup.png';
 import chart from '../public/images/chart.png';
 import settings from '../public/images/setting.png';
-import logout from '../public/images/logout.png';
+import logoutImg from '../public/images/logout.png';
 import home from '../public/images/home.png';
+import { useAuth } from '../context';
 
 const SideBar = () => {
+  const { logout } = useAuth();
+  const router = useRouter();
   const [user, setUser] = useState(null);
 
   const checkAuth = async () => {
@@ -22,6 +26,11 @@ const SideBar = () => {
     console.log('sidebar user', user);
 
     setUser(user);
+  };
+
+  const handleLogout = () => {
+    logout();
+    router.push('/');
   };
 
   useEffect(() => {
@@ -105,12 +114,13 @@ const SideBar = () => {
           </div>
         </Link>
 
-        <Link href="/">
-          <div className="flex flex-row items-center gap-3 hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2">
-            <Image src={logout} alt="settings" className="w-6 h-6" />
-            <h2 className="text-lg text-darkishgray font-semibold">Log Out</h2>
-          </div>
-        </Link>
+        <div
+          onClick={handleLogout}
+          className="flex flex-row items-center gap-3 hover:bg-lightishblue hover:border-l-4 hover:border-l-solid hover:border-l-primaryPurple hover:rounded-md p-2"
+        >
+          <Image src={logoutImg} alt="settings" className="w-6 h-6" />
+          <h2 className="text-lg text-darkishgray font-semibold">Log Out</h2>
+        </div>
 
         <div className="flex flex-row items-center gap-4 mt-8 border-t border-slate-300 pt-6">
           <Image

@@ -68,8 +68,6 @@ const Login = () => {
         provider: 'facebook',
       });
 
-      console.log('user', user);
-
       if (error) throw error;
     } catch (error) {
       console.error(error);
@@ -176,7 +174,7 @@ const Login = () => {
 
             <p className="text-center">
               Already have an account?{' '}
-              <Link className="text-primaryPurple " href="/Login">
+              <Link className="text-primaryPurple " href="/signup">
                 Sign Up
               </Link>{' '}
             </p>
