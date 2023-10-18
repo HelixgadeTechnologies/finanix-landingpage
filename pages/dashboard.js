@@ -66,7 +66,7 @@ const Dashboard = () => {
               <div className="w-full md:w-60 p-3 border border-solid border-slate-300 rounded-lg">
                 <div className="flex flex-row justify-between">
                   <div className="space-y-1">
-                    <h2 className="text-textGray text-lg">WALLET</h2>
+                    <h2 className="text-textGray text-lg">TRADING BALANCE</h2>
                     <h2 className="text-lg text-primaryPurple font-semibold">
                       $2500
                     </h2>
@@ -124,15 +124,15 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="w-full mt-6">
-                  <h2 className="text-lg text-black font-semibold">8%</h2>
+                  <h2 className="text-lg text-black font-semibold">
+                    2.5% daily
+                  </h2>
                   <div className="flex flex-row gap-1 items-center">
                     <Image
                       src={Arrowup}
                       alt="arrow up"
                       className="w-3 h-3 mt-1"
                     />
-                    <p className="text-textyellow text-sm">+12%</p>
-                    <p></p>
                   </div>
                 </div>
               </div>
